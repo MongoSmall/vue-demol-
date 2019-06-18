@@ -1,0 +1,17 @@
+span{
+	
+	background: red;
+	display: inline-block;
+	padding: 10px;
+	color: #fff;
+	margin: 10px 0px;
+	
+}
+.changeColor span{
+	background: green;
+}
+.changeLength span:after{
+	content:"Length";
+	margin-left: 10px;
+	
+}

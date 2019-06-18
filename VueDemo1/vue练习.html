@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/vue练习.css">
+	<body>
+	<div id="Top">
+		<p>{{greet('morning')}}</p>
+		
+		<h1>{{message}}</h1>
+		 <p v-if="seen">看到我了吗</p>
+	</div>
+	<div id="app">
+		<ol>
+			<li v-for="todo in todos">
+				{{todo.text}}
+			</li>
+			
+		</ol>
+		
+	</div>
+	<div id="age">
+		<p>My name is {{ age }}</p>
+		<button v-on:click.once="add(1)">涨一岁</button><!--只点击一次有用-->
+		<button @click="subtract(1)">
+			减一岁</button>
+		<button v-on:dblclick="add(10)">涨十岁</button>
+		<button @dblclick="subtract(10)">减十岁</button>
+		<div id="canvas"@mousemove="updateXY">
+			{{x}},{{y}} <!--鼠标事件，鼠标移动，获取x，y的值-->
+			-<span @mousemove.stop="">Stop Moving</span>
+		<a @click.prevent="alert()" href="http://www.baidu.com">百度一下你就知道</a>
+		</div><!--vue修饰符 prevent，阻止默认事件，stop阻止冒泡事件，once点击一次有效-->
+	</div>
+	<div id="app2">
+		<p>{{message}}</p>
+		<input v-model="message" />
+		<p>{{information}}</p>
+		<button @click="reverseMessage">Reverse Message</button>
+	</div>
+	
+	<div id="app3">
+		<h1>键盘事件</h1>
+		<label>姓名:</label>
+		<input type="text" @keyup.enter="LogName"/><br /><!--按下enter键才会触发，没有.enter会一直触发-->
+		<label>年龄:</label>
+		<input type="text" @keyup.alt.enter="LogAge"/><!--按下alt+enter键才会触发，没有.enter会一直触发-->
+		
+	</div>
+	<div id="app4">
+		<h1>双向数据绑定 input/select/textarea</h1>
+		<label>电话:</label>
+		<input ref="tel" type="text"  v-model="tel" /> <!--@keydown="telephone"-->>
+		<span>{{tel}}</span><br />
+		<label>地址:</label>
+		<input ref="addr" type="text" v-model="addr" /> <!--@keydown="address"--> >
+		<span>{{addr}}</span>
+	
+	</div>
+	<div id="app5">
+		<h3>computed  计算属性</h3>
+			<button v-on:click="a++">Add to A</button>
+			<button @click="b++">Add to B</button>
+			<p>A={{a}}</p>
+			<p>B={{b}}</p>
+			<p>age+A={{addToA}}</p>
+			<p>age+B={{addToB}}</p>
+		</div>
+	<script src="js/vuelianxi.js"></script>
+    </body>
+	
+</html>

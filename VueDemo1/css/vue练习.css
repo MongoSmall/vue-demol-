@@ -1,0 +1,68 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+#Top{
+	width:200px;
+	height:200px;
+	background:pink;
+	color: #FF7F50;
+}
+#app{
+	width: 200px;
+	height: 100px;
+	background: coral;
+	font-size: 16px;color:#666;
+}
+#age{
+	width: 300px;
+	height: 100px;
+	background: bisque;
+	font-size: 16px;color: #666666;
+}
+#age button{
+	width: 50px;
+	height: 45px;
+	background: url("../img/t1.png");
+	opacity: 0.6;
+	/*border: 0px;*/
+	margin: 10px;
+}
+#canvas{
+	width: 100px;
+	height: 100px;
+	background: #FFC0CB;
+	padding: 40px 20px;
+	text-align: center;
+	border: 1px solid #666666;
+	margin-top: 20px;
+	
+	
+	
+}#app2{
+	width: 200px;
+	height: 200px;
+	background: aliceblue;
+	float: right;
+	
+}
+#app3{
+	width: 200px;
+	height: 200px;
+	background: aliceblue;
+	float: right;
+}
+#app4{
+	width: 350px;
+	height: 200px;
+	background: aliceblue;
+	float:right;margin-right: 10px;
+	
+}
+#app5{
+	width: 200px;
+	height: 200px;
+	background: #F0F8FF;
+	font-size: 16px;color: #666666;
+	float: right;
+}
